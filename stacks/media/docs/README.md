@@ -39,7 +39,7 @@ sudo apt install -y ca-certificates curl gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 
 
-curl -fsSL https://get.docker.com | sudo
+curl -fsSL https://get.docker.com | sudo sh
 
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
