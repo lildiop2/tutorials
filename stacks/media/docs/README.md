@@ -102,7 +102,7 @@ docker node ls
 # 📁 PARTI 3 – Estriti dosye
 
 ```bash
-mkdir -p media/{config,downloads/{series,movies}}
+mkdir -p media/{config/{qbittorrent,prowlarr,radarr,sonarr,jellyfin},downloads/{series,movies}}
 cd media
 ```
 
