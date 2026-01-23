@@ -71,7 +71,7 @@ docker version
 
 ### Pa 2 – Verifye
 
-No terminal WSL ou PowerShell:
+Nan terminal WSL oubyen PowerShell:
 
 ```bash
 docker version
@@ -104,6 +104,21 @@ docker node ls
 ```bash
 mkdir -p media/{config/{qbittorrent,prowlarr,radarr,sonarr,jellyfin},downloads/{series,movies}}
 cd media
+```
+
+#### 📄 Rezilta:
+
+```texttree
+media/
+├── config/        # Fichye konfigirasyon sèvis yo
+│   ├── qbittorrent/
+│   ├── prowlarr/
+│   ├── radarr/
+│   ├── sonarr/
+│   └── jellyfin/
+└── downloads/     # fim ak seri ou download yo
+    ├── series/
+    └── movies/
 ```
 
 ---
