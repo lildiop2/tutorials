@@ -240,13 +240,13 @@ docker service ls
 
 # 🌐 PARTI 6 – Aksede ak sèvis yo
 
-| Sèvis       | Lyen                                           | Enfo                                            |
-| ----------- | ---------------------------------------------- | ----------------------------------------------- |
-| qBittorrent | [http://localhost:8080](http://localhost:8080) | _pran password inisyal la nan log container a._ |
-| Radarr      | [http://localhost:7878](http://localhost:7878) |                                                 |
-| Sonarr      | [http://localhost:8989](http://localhost:8989) |                                                 |
-| Prowlarr    | [http://localhost:9696](http://localhost:9696) |                                                 |
-| Jellyfin    | [http://localhost:8096](http://localhost:8096) |                                                 |
+| Sèvis       | Lyen                                           | Enfo                                                                                           |
+| ----------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| qBittorrent | [http://localhost:8080](http://localhost:8080) | _Pran kredensyal la nan log container a ak kòmand sa:_ `docker service logs media_qbittorrent` |
+| Radarr      | [http://localhost:7878](http://localhost:7878) |                                                                                                |
+| Sonarr      | [http://localhost:8989](http://localhost:8989) |                                                                                                |
+| Prowlarr    | [http://localhost:9696](http://localhost:9696) |                                                                                                |
+| Jellyfin    | [http://localhost:8096](http://localhost:8096) |                                                                                                |
 
 ---
 
