@@ -24,7 +24,7 @@ services:
         mode: host
     environment:
       TZ: America/Sao_Paulo
-      CF_API_EMAIL: your@email.com
+      CF_API_EMAIL: your_email@email.com
       CF_DNS_API_TOKEN: ME6QksjasqLKuLTWwZlDeSKNIAD11jSn1menSkve
       TRAEFIK_DASHBOARD_CREDENTIALS: admin:HASHED_PASSWORD
     command:
@@ -54,7 +54,7 @@ services:
       - "--certificatesresolvers.letsencrypt.acme.dnschallenge.provider=cloudflare"
       - "--certificatesResolvers.letsencrypt.acme.dnschallenge.resolvers=1.1.1.1:53,1.0.0.1:53"
       - "--certificatesResolvers.letsencrypt.acme.dnschallenge.propagation.delayBeforeChecks=20"
-      - "--certificatesresolvers.letsencrypt.acme.email=your@email.com"
+      - "--certificatesresolvers.letsencrypt.acme.email=your_email@email.com"
       - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
 
       # TLS
