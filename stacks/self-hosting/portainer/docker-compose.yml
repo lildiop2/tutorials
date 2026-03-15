@@ -13,7 +13,7 @@ services:
       - portainer_data:/data
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      TRUSTED_ORIGINS: portainer.domain.com
+      TRUSTED_ORIGINS: portainer.vinaprannakem.com
     logging:
       driver: json-file
       options:
@@ -32,7 +32,7 @@ services:
         order: start-first
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.portainer.rule=Host(`portainer.domain.com`)"
+        - "traefik.http.routers.portainer.rule=Host(`portainer.vinaprannakem.com`)"
         - "traefik.http.routers.portainer.entrypoints=web"
         - "traefik.http.services.portainer.loadbalancer.server.port=9000"
 

@@ -6,13 +6,13 @@
 
 Yon sèvè ki:
 
-✅ Gen Docker Swarm
-✅ Jere stack ak Portainer
-✅ Gen reverse proxy ak Traefik
-✅ Gen HTTPS otomatik
-✅ Sèvi ak Cloudflare Tunnel
-✅ Gen firewall konfigire kòrèkteman
-✅ Pa ekspoze container entèn
+- ✅ Gen Docker Swarm
+- ✅ Jere stack ak Portainer
+- ✅ Gen reverse proxy ak Traefik
+- ✅ Gen HTTPS otomatik
+- ✅ Sèvi ak Cloudflare Tunnel
+- ✅ Gen firewall konfigire kòrèkteman
+- ✅ Pa ekspoze container entèn
 
 ---
 
@@ -65,7 +65,7 @@ Nou pral fè li respekte UFW.
 ## 🔹 Enstalasyon ufw + fail2ban
 
 ```bash
-sudo apt install ufw fail2ban -y
+ sudo apt install ufw fail2ban apache2-utils -y
 ```
 
 ---
@@ -181,7 +181,7 @@ docker swarm init --advertise-addr <SERVER_IP>
 
 ---
 
-# 7️⃣ Kreye Overlay Networks (MANDATWA)
+# 7️⃣ Kreye Overlay Networks (OBLIGATWA)
 
 Public:
 
@@ -335,10 +335,6 @@ services:
         published: 443
         protocol: tcp
         mode: host
-      - target: 8080
-        published: 8080
-        protocol: tcp
-        mode: host
     environment:
       TZ: America/Sao_Paulo
       CF_API_EMAIL: your_email@email.com
@@ -475,18 +471,21 @@ services:
     networks:
       - public
     volumes:
-      - ~/Documentos/tutorials/stacks/self-hosting/docs:/usr/share/nginx/html:ro
+      - my_app:/usr/share/nginx/html:ro
     deploy:
       replicas: 1
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.app.rule=Host(`app.domain.com`)"
-        - "traefik.http.routers.app.entrypoints=websecure"
+        - "traefik.http.routers.app.entrypoints=web"
         - "traefik.http.services.app.loadbalancer.server.port=80"
 
 networks:
   public:
     external: true
+
+volumes:
+  my_app:
 ```
 
 ---
@@ -523,11 +522,11 @@ Pa dwe gen 9000 ouvè piblik si w itilize Traefik.
 
 # 1️⃣3️⃣ Erè Komen
 
-❌ Pa itilize network internal
-❌ Pa mete exposedbydefault=false
-❌ Pa itilize DNS Challenge
-❌ Pa entegre Docker ak UFW
-❌ Mete database sou network public
+- ❌ Pa itilize network internal
+- ❌ Pa mete exposedbydefault=false
+- ❌ Pa itilize DNS Challenge
+- ❌ Pa entegre Docker ak UFW
+- ❌ Mete database sou network public
 
 ---
 
