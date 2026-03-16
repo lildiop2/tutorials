@@ -24,6 +24,7 @@ Pou swiv gid sa a, ou bezwen:
 - 4GB RAM (8GB rekòmande)
 - SSD 40GB+
 - Ubuntu/ Debian
+- Yon domèn ak Cloudflare (pou DNS Challenge)
 
 ---
 
