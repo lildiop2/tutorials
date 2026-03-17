@@ -304,7 +304,7 @@ networks:
 Deploy:
 
 ```bash
-docker stack deploy -c docker-compose.yml portainer
+docker stack deploy -c docker-compose.yml -d portainer
 ```
 
 ---
